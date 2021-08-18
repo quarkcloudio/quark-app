@@ -1,15 +1,12 @@
 <template>
-  <Render :body="body" :data="data" />
+  <view :style="body.style">
+    <slot></slot>
+  </view>
 </template>
 
 <script lang="ts">
-import Render from './Render.vue';
-
 export default {
   name: 'PageContainer',
-  components: {
-    Render
-  },
   mounted() {
     console.log(this.body);
   },
