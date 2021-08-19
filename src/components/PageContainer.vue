@@ -1,5 +1,5 @@
 <template>
-  <view :style="body.style">
+  <view :style="style">
     <slot></slot>
   </view>
 </template>
@@ -8,8 +8,8 @@
 export default {
   name: 'PageContainer',
   mounted() {
-    console.log(this.body);
+
   },
-  props: ['body','data']
+  props: ['style']
 }
 </script>
