@@ -1,19 +1,15 @@
 const config = {
   projectName: 'quark-app',
-  date: '2021-7-30',
-  designWidth: 375,
+  date: '2021-8-20',
+  designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
     750: 1,
-    828: 1.81 / 2,
-    375: 2 / 1
+    828: 1.81 / 2
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [
-    '@tarojs/plugin-html',
-    '@tarojs/plugin-mock',
-  ],
+  plugins: [],
   defineConstants: {
   },
   copy: {
@@ -22,7 +18,7 @@ const config = {
     options: {
     }
   },
-  framework: 'vue3',
+  framework: 'react',
   mini: {
     postcss: {
       pxtransform: {
@@ -63,6 +59,21 @@ const config = {
         }
       }
     }
+  },
+  rn: {
+    appName: 'taroDemo',
+    output: {
+      ios: './ios/main.jsbundle',
+      iosAssetsDest: './ios',
+      android: './android/app/src/main/assets/index.android.bundle',
+      androidAssetsDest: './android/app/src/main/res',
+      // iosSourceMapUrl: '',
+      iosSourcemapOutput: './ios/main.map',
+      // iosSourcemapSourcesRoot: '',
+      // androidSourceMapUrl: '',
+      androidSourcemapOutput: './android/app/src/main/assets/index.android.map',
+      // androidSourcemapSourcesRoot: '',
+    },
   }
 }
 
