@@ -9,8 +9,9 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [],
+  plugins: ['@tarojs/plugin-mock'],
   defineConstants: {
+    HOST: '"youhost"'
   },
   copy: {
     patterns: [
@@ -61,7 +62,7 @@ const config = {
     }
   },
   rn: {
-    appName: 'taroDemo',
+    appName: 'QuarkAPP',
     output: {
       ios: './ios/main.jsbundle',
       iosAssetsDest: './ios',

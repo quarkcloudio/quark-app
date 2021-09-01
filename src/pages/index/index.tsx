@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Engine from '../../components/Engine';
+import config from '../../../config.json'
 
 const Index: React.FC<{}> = () => {
 
-  const [initData, setInitApi] = useState();
+  const [initApi, setInitApi] = useState();
 
   useEffect(() => {
     onSetInitApi()
   }, []);
 
   const onSetInitApi = async () => {
-    const config = await request('./config.json');
     setInitApi(config.initApi);
   };
 
   return (
-    <Engine initApi={initData} />
+    initApi ? <Engine initApi={initApi} /> : null
   );
 }
 
