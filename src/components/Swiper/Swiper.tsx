@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Swiper as TaroSwiper, SwiperItem, Navigator } from '@tarojs/components'
+import { Image, Swiper as TaroSwiper, SwiperItem } from '@tarojs/components'
 
 const Swiper: React.FC<any> = (props:any) => {
   return (
@@ -13,15 +13,11 @@ const Swiper: React.FC<any> = (props:any) => {
     >
       {props.list.map((item:any) => {
         return <SwiperItem>
-                <Navigator
-                  url={item.url}
-                >
-                  <Image
-                    style="width:100%"
-                    mode={'widthFix'}
-                    src={item.src}
-                  />
-                </Navigator>
+                <Image
+                  style="width:100%"
+                  mode={'widthFix'}
+                  src={item.src}
+                />
               </SwiperItem>;
       })}
     </TaroSwiper>
