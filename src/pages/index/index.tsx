@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Taro from '@tarojs/taro'
+import Taro from '@tarojs/taro';
+import { View } from '@tarojs/components'
 import Engine from '../../components/Engine';
 import config from '../../../config.json'
 
@@ -10,7 +11,7 @@ const Index: React.FC<{}> = () => {
   const api:any = $instance.router.params.api ?? config.initApi;
 
   useEffect(() => {
-    onSetInitApi()
+    onSetInitApi();
   }, [api]);
 
   const onSetInitApi = async () => {
@@ -18,7 +19,7 @@ const Index: React.FC<{}> = () => {
   };
 
   return (
-    initApi ? <Engine initApi={initApi} /> : null
+    initApi ? <Engine initApi={initApi} /> : <View>Error</View>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { get } from '../../services/request'
 import Render from '../Render';
+import { View } from '@tarojs/components'
 
 const Page: React.FC<any> = (props:any) => {
 
@@ -22,9 +23,9 @@ const Page: React.FC<any> = (props:any) => {
   };
 
   return (
-    <view style={props?.style}>
+    <View style={props?.style}>
       <Render body={props.body} data={data ? data : props.data} callback={null} />
-    </view>
+    </View>
   );
 }
 

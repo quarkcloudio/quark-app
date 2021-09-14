@@ -1,17 +1,26 @@
+// 你自己的请求域名
+const HOST = '"http://127.0.0.1:9527"';
+// const HOST = '"http://10.0.2.2:9527"';
+
 const config = {
   projectName: 'quark-app',
-  date: '2021-8-20',
+  date: '2021-9-11',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
-    750: 1,
+    750: 2/1,
     828: 1.81 / 2
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: ['@tarojs/plugin-mock'],
+  plugins: [
+    // 引入 npm 安装的插件，并传入插件参数
+    ['@tarojs/plugin-mock', {
+      host: '127.0.0.1'
+    }],
+  ],
   defineConstants: {
-    HOST: '"youhost"'
+    HOST: HOST
   },
   copy: {
     patterns: [
@@ -62,7 +71,7 @@ const config = {
     }
   },
   rn: {
-    appName: 'QuarkAPP',
+    appName: 'taroDemo',
     output: {
       ios: './ios/main.jsbundle',
       iosAssetsDest: './ios',
@@ -75,6 +84,11 @@ const config = {
       androidSourcemapOutput: './android/app/src/main/assets/index.android.map',
       // androidSourcemapSourcesRoot: '',
     },
+    postcss: {
+      cssModules: {
+        enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+      }
+    }
   }
 }
 

@@ -18,7 +18,10 @@ export async function get(params: any) {
 
   return Taro.request({
     method: 'GET',
-    url: HOST+'/'+actionUrl
+    url: HOST+'/'+actionUrl,
+    fail: function (res) {
+      alert(res);
+    }
   });
 }
 

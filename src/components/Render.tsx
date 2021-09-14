@@ -2,7 +2,8 @@ import React from 'react';
 import Page from '../components/Layout/Page';
 import Swiper from '../components/Swiper/Swiper';
 import RichText from '../components/RichText/RichText';
-import { Input } from '@tarojs/components'
+import Cell from '../components/Cell/Cell';
+import { Input, View } from '@tarojs/components'
 import { tplEngine } from '../utils/template';
 
 const Render: React.FC<any> = (props:any) => {
@@ -26,6 +27,10 @@ const Render: React.FC<any> = (props:any) => {
       {
         key: 'input',
         component: <Input {...body} />
+      },
+      {
+        key: 'cell',
+        component: <Cell {...body} />
       }
     ];
   }
@@ -78,7 +83,7 @@ const Render: React.FC<any> = (props:any) => {
 
   const component = componentRender(props.body, props.data, props.callback);
 
-  return (typeof component === 'string') ? <view dangerouslySetInnerHTML={{__html: component}} /> : component
+  return (typeof component === 'string') ? <View dangerouslySetInnerHTML={{__html: component}} /> : component
 }
 
 export default Render;
