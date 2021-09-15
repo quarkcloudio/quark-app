@@ -6,12 +6,12 @@ const Cell: React.FC<any> = (props:any) => {
 
   return (
     <View className="cell">
-      <View className="cell-title">
+      <Text className="cell-title">
         {props.title}
-      </View>
-      <View className="cell-value">
+      </Text>
+      <Text className="cell-value">
         {props.desc ?? null}
-      </View>
+      </Text>
     </View>
   );
 }

@@ -8,7 +8,7 @@ const config = {
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
-    750: 2/1,
+    750: 1,
     828: 1.81 / 2
   },
   sourceRoot: 'src',

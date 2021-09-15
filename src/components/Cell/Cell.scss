@@ -1,24 +1,23 @@
 .cell {
     position: relative;
     display: flex;
-    width: 100%;
-    line-height: 20px;
-    padding: 13px 16px;
+    line-height: 40px;
+    padding: 26px 32px;
     background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 1px 7px #edeef1;
-    font-size: 14px;
+    border-radius: 12px;
+    box-shadow: 0 2px 14px #edeef1;
     color: #666;
     margin: 10px 0;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
 .cell-title {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    font-size: 28px;
+    flex:1;
 }
 .cell-value {
-    display: flex;
     text-align: right;
-    font-size: 14px;
+    font-size: 28px;
     color: #ccc;
 }
