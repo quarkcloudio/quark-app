@@ -2,6 +2,7 @@ export default {
   // swiper
   'GET /api/swiper/index': {
     component: "page",
+    title: 'Swiper 轮播',
     body: {
       component: "swiper",
       indicatorColor: '#999',
@@ -23,9 +24,5 @@ export default {
         }
       ]
     }
-  },
-
-  'POST /api/upload': {
-    file: 'xxxx'
   }
 }
