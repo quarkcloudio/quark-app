@@ -4,7 +4,6 @@ import { View, Text } from '@tarojs/components';
 import './Cell.scss';
 
 const Cell: React.FC<any> = (props:any) => {
-
   const navigateTo = (url:string, openType:string = 'navigate') => {
     if(!url) {
       return false;
