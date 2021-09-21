@@ -6,6 +6,11 @@ export default {
       body: [
         {
           component: "cell",
+          title: 'Tester 页面',
+          url:'/pages/index/index?api=api/tester/index'
+        },
+        {
+          component: "cell",
           title: 'Page 页面',
           url:'/pages/index/index?api=api/page/index'
         },

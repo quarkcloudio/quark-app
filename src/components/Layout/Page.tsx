@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Taro from '@tarojs/taro';
-import { get } from '../../services/request'
+import { get } from '../../services/request';
 import Render from '../Render';
-import { View } from '@tarojs/components'
+import { View } from '@tarojs/components';
 
 const Page: React.FC<any> = (props:any) => {
 

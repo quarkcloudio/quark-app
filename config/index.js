@@ -15,9 +15,13 @@ const config = {
   outputRoot: 'dist',
   plugins: [
     // 引入 npm 安装的插件，并传入插件参数
+    ['@tarojs/plugin-html', {
+      // 过滤 antd 组件库的前缀：am-
+      pxtransformBlackList: [/adm-/, /^body/]
+    }],
     ['@tarojs/plugin-mock', {
       host: '127.0.0.1'
-    }],
+    }]
   ],
   defineConstants: {
     HOST: HOST
