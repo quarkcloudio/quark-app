@@ -1,6 +1,5 @@
 // 你自己的请求域名
-const HOST = '"http://127.0.0.1:9527"';
-// const HOST = '"http://10.0.2.2:9527"';
+const HOST = process.env.TARO_ENV === 'rn' ? '"http://10.0.2.2:9527"' : '"http://127.0.0.1:9527"';
 
 const config = {
   projectName: 'quark-app',

@@ -36,6 +36,8 @@ export async function post(params: any) {
     actionUrl = url;
   }
 
+  console.log(actionUrl);
+
   return Taro.request({
     method: 'POST',
     url: actionUrl,

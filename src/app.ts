@@ -3,7 +3,11 @@ import './app.scss';
 
 class App extends Component {
 
-  componentDidMount () {}
+  componentDidMount () {
+    if(process.env.TARO_ENV !== 'rn') {
+      import('./theme.scss');
+    }
+  }
 
   componentDidShow () {}
 
@@ -16,4 +20,5 @@ class App extends Component {
     return this.props.children
   }
 }
+
 export default App
