@@ -1,5 +1,4 @@
 import React from 'react';
-import Tester from '../tester';
 import Page from '../page';
 import Swiper from '../swiper';
 import RichText from '../rich-text';
@@ -13,10 +12,6 @@ export const Render: React.FC<any> = (props:any) => {
   const registerComponent = (body:any, data:any, callback:any) => {
 
     return [
-      {
-        key: 'tester',
-        component: <Tester {...body} />
-      },
       {
         key: 'page',
         component: <Page {...body} />

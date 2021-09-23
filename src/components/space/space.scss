@@ -5,8 +5,10 @@
 
 .space-item {
     margin-right: 16px;
+    /*postcss-pxtransform rn eject enable*/
     display: inline-block;
     box-sizing: border-box;
+    /*postcss-pxtransform rn eject disable*/
 }
 
 .space-wrap {

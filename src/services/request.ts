@@ -16,6 +16,8 @@ export async function get(params: any) {
     actionUrl = `${actionUrl}`;
   }
 
+  console.log(HOST);
+
   return Taro.request({
     method: 'GET',
     url: HOST+'/'+actionUrl,

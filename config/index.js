@@ -1,5 +1,5 @@
 // 你自己的请求域名
-const HOST = process.env.TARO_ENV === 'rn' ? '"http://10.0.2.2:9527"' : '"http://127.0.0.1:9527"';
+const HOST = process.env.TARO_ENV === 'rn1' ? '"http://10.0.2.2:9527"' : '"http://127.0.0.1:9527"';
 
 const config = {
   projectName: 'quark-app',
@@ -16,7 +16,7 @@ const config = {
     // 引入 npm 安装的插件，并传入插件参数
     ['@tarojs/plugin-html', {
       // 过滤 antd 组件库的前缀：am-
-      // pxtransformBlackList: [/adm-/, /^body/]
+      pxtransformBlackList: [/adm-/, /^body/]
     }],
     ['@tarojs/plugin-mock', {
       host: '127.0.0.1'

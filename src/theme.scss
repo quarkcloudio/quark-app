@@ -1,4 +1,5 @@
 .default-theme {
+    /*postcss-pxtransform rn eject enable*/
     --adm-color-primary: #1677ff;
     --adm-color-success: #00b578;
     --adm-color-warning: #ff8f1f;
@@ -18,4 +19,5 @@
     --adm-z-index-popup: 1000;
     --adm-z-index-popover: 1030;
     --adm-z-index-floating-panel: 900;
+    /*postcss-pxtransform rn eject disable*/
 }

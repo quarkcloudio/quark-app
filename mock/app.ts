@@ -7,7 +7,7 @@ export default {
         {
           component: "cell",
           title: 'Tester 页面',
-          url:'/pages/index/index?api=api/tester/index'
+          url:'/pages/tester/index'
         },
         {
           component: "cell",

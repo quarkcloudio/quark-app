@@ -1,16 +1,17 @@
 import React from 'react';
 import { View } from '@tarojs/components';
-import Button from '../button';
-import Block from '../block';
-import Space from '../space';
+import Button from '../../components/button';
+import Block from '../../components/block';
+import Space from '../../components/space';
 import classNames from 'classnames';
-import './tester.scss'
+import './index.scss';
+// import { Button as BaseButton } from 'antd-mobile'
 
-export const Tester: React.FC<any> = (props:any) => {
+const Tester: React.FC<any> = (props:any) => {
 
   return (
     <Block title="不同颜色的按钮">
-      <Space size="16" wrap>
+      <Space size="8" wrap>
         <Button>
           Primary
         </Button>
@@ -26,7 +27,10 @@ export const Tester: React.FC<any> = (props:any) => {
         <Button>
           Primary
         </Button>
+        {/* <BaseButton color="primary">Primary</BaseButton> */}
       </Space>
     </Block>
   );
 }
+
+export default Tester;

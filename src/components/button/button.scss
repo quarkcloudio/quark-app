@@ -1,19 +1,17 @@
 .button {
     background-color: #1677ff;
     position: relative;
-    padding: 18px 32px;
+    padding: 8px 28px;
     text-align: center;
-    border: 2px solid #1677ff;
-    border-radius: 6px;
-    line-height: 30px;
-    transition: opacity .15s ease;
+    border: 1px solid #1677ff;
+    border-radius:6px;
+    /*postcss-pxtransform rn eject enable*/
     display: inline-block;
     box-sizing: border-box;
+    /*postcss-pxtransform rn eject disable*/
 }
 
 .button-text {
-    font-size: 30px;
-    line-height: 30px;
-    margin: 0px;
+    font-size: 28px;
     color: #fff;
 }
