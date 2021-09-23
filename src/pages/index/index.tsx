@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Taro from '@tarojs/taro';
-import { View } from '@tarojs/components'
-import Engine from '../../components/Engine';
-import config from '../../../config.json'
+import Engine from '../../components/engine';
+import config from '../../../config.json';
+import { View } from '@tarojs/components';
 
 const Index: React.FC<{}> = () => {
 
@@ -19,7 +19,9 @@ const Index: React.FC<{}> = () => {
   };
 
   return (
-    initApi ? <Engine initApi={initApi} /> : <View>Error</View>
+    <View className="default-theme">
+      {initApi ? <Engine initApi={initApi} /> : <View>Error</View>}
+    </View>
   );
 }
 

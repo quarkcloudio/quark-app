@@ -1,0 +1,15 @@
+.space {
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.space-item {
+    margin-right: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.space-wrap {
+    flex-wrap: wrap;
+    margin-bottom: calc(16px*-1);
+}

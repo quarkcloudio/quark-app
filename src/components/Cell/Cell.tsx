@@ -1,9 +1,10 @@
 import React from 'react';
 import Taro from '@tarojs/taro';
+import classNames from 'classnames';
 import { View, Text } from '@tarojs/components';
-import './Cell.scss';
+import './cell.scss'
 
-const Cell: React.FC<any> = (props:any) => {
+export const Cell: React.FC<any> = (props:any) => {
   const navigateTo = (url:string, openType:string = 'navigate') => {
     if(!url) {
       return false;
@@ -44,17 +45,15 @@ const Cell: React.FC<any> = (props:any) => {
 
   return (
     <View className="cell" onClick={() => navigateTo(props.url, props.openType)}>
-      <Text className="cell-title">
+      <Text className={classNames('cell-title')}>
         {props.title}
       </Text>
-      <Text className="cell-value">
+      <Text className={classNames('cell-value')}>
         {props.desc ?? null}
       </Text>
-      <Text className="cell-icon">
+      <Text className={classNames('cell-icon')}>
         >
       </Text>
     </View>
   );
 }
-
-export default Cell;

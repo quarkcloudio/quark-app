@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { get } from '../services/request';
-import Render from './Render';
+import { get } from '../../services/request';
+import Render from '../render';
 
-const Engine: React.FC<any> = (props:any) => {
+export const Engine: React.FC<any> = (props:any) => {
 
   const [components, setComponentsState] = useState('');
   const api = props.initApi;
@@ -29,5 +29,3 @@ const Engine: React.FC<any> = (props:any) => {
     <Render body={components} />
   );
 }
-
-export default Engine;

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Taro from '@tarojs/taro';
+import Render from '../render';
 import { get } from '../../services/request';
-import Render from '../Render';
 import { View } from '@tarojs/components';
 
-const Page: React.FC<any> = (props:any) => {
+export const Page: React.FC<any> = (props:any) => {
 
   const [data, setDataState] = useState(null);
 
@@ -35,5 +35,3 @@ const Page: React.FC<any> = (props:any) => {
     </View>
   );
 }
-
-export default Page;

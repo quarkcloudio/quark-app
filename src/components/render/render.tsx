@@ -1,13 +1,13 @@
 import React from 'react';
-import Tester from '../components/Layout/Tester';
-import Page from '../components/Layout/Page';
-import Swiper from '../components/Swiper/Swiper';
-import RichText from '../components/RichText/RichText';
-import Cell from '../components/Cell/Cell';
+import Tester from '../tester';
+import Page from '../page';
+import Swiper from '../swiper';
+import RichText from '../rich-text';
+import Cell from '../cell';
 import { Input, Text } from '@tarojs/components'
-import { tplEngine } from '../utils/template';
+import { tplEngine } from '../../utils/template';
 
-const Render: React.FC<any> = (props:any) => {
+export const Render: React.FC<any> = (props:any) => {
 
   // 注册组件
   const registerComponent = (body:any, data:any, callback:any) => {
@@ -90,5 +90,3 @@ const Render: React.FC<any> = (props:any) => {
 
   return (typeof component === 'string') ? <Text>{component}</Text> : component
 }
-
-export default Render;
