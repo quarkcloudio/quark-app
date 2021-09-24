@@ -3,6 +3,7 @@ import Page from '../page';
 import Swiper from '../swiper';
 import RichText from '../rich-text';
 import Cell from '../cell';
+import WebView from '../web-view';
 import { Input, Text } from '@tarojs/components'
 import { tplEngine } from '../../utils/template';
 
@@ -21,7 +22,7 @@ export const Render: React.FC<any> = (props:any) => {
         component: <Swiper {...body} />
       },
       {
-        key: 'richText',
+        key: 'rich-text|richText',
         component: <RichText {...body} />
       },
       {
@@ -31,6 +32,10 @@ export const Render: React.FC<any> = (props:any) => {
       {
         key: 'cell',
         component: <Cell {...body} />
+      },
+      {
+        key: 'web-view|webView',
+        component: <WebView {...body} />
       }
     ];
   }

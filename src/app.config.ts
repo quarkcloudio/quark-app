@@ -1,6 +1,7 @@
 export default {
   pages: [
     'pages/index/index',
+    'pages/index/indexWONav',
     'pages/tester/index'
   ],
   window: {

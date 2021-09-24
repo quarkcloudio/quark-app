@@ -11,16 +11,16 @@ export async function get(params: any) {
   } else {
     actionUrl = `${url}?${stringify(params)}`;
   }
-  
-  if(url.indexOf("http") == -1) {
-    actionUrl = `${actionUrl}`;
+
+  if(actionUrl.indexOf("http") == -1) {
+    actionUrl = HOST+'/'+actionUrl;
   }
 
-  console.log(HOST);
+  console.log('request:' + actionUrl);
 
   return Taro.request({
     method: 'GET',
-    url: HOST+'/'+actionUrl,
+    url: actionUrl,
     fail: function (res) {
       alert(res);
     }
@@ -38,7 +38,7 @@ export async function post(params: any) {
     actionUrl = url;
   }
 
-  console.log(actionUrl);
+  console.log('request:' + actionUrl);
 
   return Taro.request({
     method: 'POST',

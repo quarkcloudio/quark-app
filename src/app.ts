@@ -3,11 +3,7 @@ import './app.scss';
 
 class App extends Component {
 
-  componentDidMount () {
-    if(process.env.TARO_ENV !== 'rn') {
-      import('./theme.scss');
-    }
-  }
+  componentDidMount () {}
 
   componentDidShow () {}
 

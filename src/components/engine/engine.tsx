@@ -17,6 +17,8 @@ export const Engine: React.FC<any> = (props:any) => {
         actionUrl: api
       });
 
+      console.log('response:' + JSON.stringify(result.data));
+
       if(result) {
         setComponentsState(result.data);
       }
