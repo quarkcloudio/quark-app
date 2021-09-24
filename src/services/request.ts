@@ -1,4 +1,4 @@
-import Taro from '@tarojs/taro'
+import Taro from '@tarojs/taro';
 import { stringify } from 'qs';
 
 export async function get(params: any) {
