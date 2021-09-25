@@ -5,29 +5,39 @@ import Button from '../../components/button';
 import Block from '../../components/block';
 import Space from '../../components/space';
 import './index.scss';
+// import {Button as AntdButton} from 'antd-mobile';
 
 const Tester: React.FC<any> = (props:any) => {
+
+  const onSetInitApi = async () => {
+    setInitApi(api);
+  };
 
   return (
     <View>
       <Block title="不同颜色的按钮">
         <Space size="8" wrap>
           <Button>
+            Default
+          </Button>
+          <Button color="primary">
             Primary
           </Button>
-          <Button>
-            Primary
+          <Button color="success">
+            Success
           </Button>
-          <Button>
-            Primary
+          <Button color="danger">
+            Danger
           </Button>
-          <Button>
-            Primary
-          </Button>
-          <Button>
-            Primary
+          <Button color="warning">
+            Warning
           </Button>
         </Space>
+      </Block>
+      <Block style="display:none" title='块级按钮'>
+        <Button block color="primary" size='large'>
+          Block Button
+        </Button>
       </Block>
     </View>
   );

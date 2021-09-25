@@ -1,17 +1,109 @@
-.button {
-    background-color: #1677ff;
+.button, .default-button {
     position: relative;
-    padding: 8px 28px;
     text-align: center;
-    border: 1px solid #1677ff;
     border-radius:6px;
+    background-color: #ffffff;
+    border: 1px solid #eee;
     /*postcss-pxtransform rn eject enable*/
+    height: auto;
     display: inline-block;
     box-sizing: border-box;
+    line-height: 1.4;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    transition: opacity .15s ease;
+    overflow: hidden;
     /*postcss-pxtransform rn eject disable*/
 }
 
-.button-text {
-    font-size: 28px;
+.primary-button {
+    background-color: #1677ff;
+    border: 1px solid #1677ff;
+    /*postcss-pxtransform rn eject enable*/
+    border: none;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.success-button {
+    background-color: #00b578;
+    border: 1px solid #00b578;
+    /*postcss-pxtransform rn eject enable*/
+    border: none;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.danger-button {
+    background-color: #ff3141;
+    border: 1px solid #ff3141;
+    /*postcss-pxtransform rn eject enable*/
+    border: none;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.warning-button {
+    background-color: #ff8f1f;
+    border: 1px solid #ff8f1f;
+    /*postcss-pxtransform rn eject enable*/
+    border: none;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.white {
     color: #fff;
+}
+
+.block {
+    /*postcss-pxtransform rn eject enable*/
+    width: 100%;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.mini-text {
+    font-size: 26px;
+    line-height: 26px;
+}
+
+.small-text {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.middle-text {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.large-text {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.mini-button {
+    padding: 8px 28px;
+    /*postcss-pxtransform rn eject enable*/
+    padding: 6px 14px;
+    line-height: 1;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.small-button {
+    padding: 8px 28px;
+    /*postcss-pxtransform rn eject enable*/
+    padding: 3px 22px;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.middle-button {
+    padding: 8px 28px;
+    /*postcss-pxtransform rn eject enable*/
+    padding: 10px 33px;
+    /*postcss-pxtransform rn eject disable*/
+}
+
+.large-button {
+    padding: 60px 40px;
+    /*postcss-pxtransform rn eject enable*/
+    padding: 22px 44px;
+    /*postcss-pxtransform rn eject disable*/
 }
