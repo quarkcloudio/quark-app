@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Swiper as TaroSwiper, SwiperItem } from '@tarojs/components';
-import './swiper.scss'
+import './swiper.scss';
 
 export const Swiper: React.FC<any> = (props:any) => {
   return (

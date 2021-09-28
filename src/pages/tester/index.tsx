@@ -9,10 +9,6 @@ import './index.scss';
 
 const Tester: React.FC<any> = (props:any) => {
 
-  const onSetInitApi = async () => {
-    setInitApi(api);
-  };
-
   return (
     <View>
       <Block title="不同颜色的按钮">

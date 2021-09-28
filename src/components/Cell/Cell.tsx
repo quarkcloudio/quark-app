@@ -2,7 +2,7 @@ import React from 'react';
 import Taro from '@tarojs/taro';
 import classNames from 'classnames';
 import { View, Text } from '@tarojs/components';
-import './cell.scss'
+import './cell.scss';
 
 export const Cell: React.FC<any> = (props:any) => {
   const navigateTo = (url:string, openType:string = 'navigate') => {
