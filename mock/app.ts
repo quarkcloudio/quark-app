@@ -34,6 +34,12 @@ export default {
           title: 'WebView 页面',
           url:'/pages/index/indexWONav?api=api/web-view/index'
         },
+        {
+          key:'cell6',
+          component: "cell",
+          title: 'Tabs 标签页',
+          url:'/pages/index/index?api=api/tabs/index'
+        },
       ]
   },
 }

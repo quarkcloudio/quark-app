@@ -4,6 +4,7 @@ import Swiper from '../swiper';
 import RichText from '../rich-text';
 import Cell from '../cell';
 import WebView from '../web-view';
+import Tabs from '../tabs';
 import { Input, Text } from '@tarojs/components'
 import { tplEngine } from '../../utils/template';
 
@@ -36,6 +37,10 @@ export const Render: React.FC<any> = (props:any) => {
       {
         key: 'web-view|webView',
         component: <WebView {...body} />
+      },
+      {
+        key: 'tabs',
+        component: <Tabs {...body} />
       }
     ];
   }

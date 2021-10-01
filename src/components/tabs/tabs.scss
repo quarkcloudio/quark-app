@@ -4,30 +4,39 @@
     border-radius:6px;
     background-color: #ffffff;
     border: 1px solid #eee;
+    height: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 1.4;
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    transition: opacity .15s ease;
+    overflow: hidden;
 }
 
 .primary-button {
     background-color: #1677ff;
-    border: 1px solid #1677ff;
 }
 
 .success-button {
     background-color: #00b578;
-    border: 1px solid #00b578;
 }
 
 .danger-button {
     background-color: #ff3141;
-    border: 1px solid #ff3141;
 }
 
 .warning-button {
     background-color: #ff8f1f;
-    border: 1px solid #ff8f1f;
 }
 
 .white {
     color: #fff;
+}
+
+.block {
+    width: 100%;
 }
 
 .mini-text {
@@ -51,18 +60,18 @@
 }
 
 .mini-button {
-    padding: 8px 28px;
+    padding: 6px 14px;
+    line-height: 1;
 }
 
 .small-button {
-    padding: 8px 28px;
+    padding: 3px 22px;
 }
 
 .middle-button {
-    padding: 8px 28px;
+    padding: 10px 33px;
 }
 
 .large-button {
-    height: 110px;
-    line-height: 110px;
+    padding: 22px 44px;
 }

@@ -1,0 +1,27 @@
+.tabs-tab-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom-color: #eee;
+    border-bottom-width: 1px;
+}
+
+.tabs-tab-wrapper {
+    background-color: #1677ff;
+    border: 1px solid #1677ff;
+}
+
+.tabs-tab {
+    background-color: #00b578;
+    border: 1px solid #00b578;
+}
+
+.tabs-tab-active {
+    background-color: #ff3141;
+    border: 1px solid #ff3141;
+}
+
+.tabs-content {
+    background-color: #ff8f1f;
+    border: 1px solid #ff8f1f;
+}
