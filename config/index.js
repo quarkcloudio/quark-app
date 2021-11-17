@@ -18,7 +18,7 @@ const config = {
       // 过滤 antd 组件库的前缀：am-
       pxtransformBlackList: [/adm-/, /^body/]
     }],
-    ['@tarojs/plugin-mock', {
+    ['@quarkcms/plugin-mock', {
       host: '127.0.0.1'
     }]
   ],
