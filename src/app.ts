@@ -1,5 +1,5 @@
-import { Component } from 'react';
-import './app.scss';
+import { Component } from 'react'
+import './app.scss'
 
 class App extends Component {
 
@@ -16,5 +16,4 @@ class App extends Component {
     return this.props.children
   }
 }
-
 export default App

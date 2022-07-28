@@ -1,28 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import Taro from '@tarojs/taro';
-import Engine from '../../components/engine';
-import config from '../../../config.json';
-import { View } from '@tarojs/components';
+import { Component } from 'react'
+import { NativeBaseProvider, Center } from 'native-base';
+import './index.scss'
 
-const Index: React.FC<{}> = () => {
+export default class Index extends Component {
 
-  const [initApi, setInitApi] = useState();
-  const $instance = Taro.getCurrentInstance();
-  const api:any = $instance.router.params.api ?? config.initApi;
+  componentDidMount () { }
 
-  useEffect(() => {
-    onSetInitApi();
-  }, [api]);
+  componentWillUnmount () { }
 
-  const onSetInitApi = async () => {
-    setInitApi(api);
-  };
+  componentDidShow () { }
 
-  return (
-    <View className="default-theme">
-      {initApi ? <Engine initApi={initApi} /> : <View>Error</View>}
-    </View>
-  );
+  componentDidHide () { }
+
+  render () {
+    return (
+      <NativeBaseProvider>
+        <Center>
+          hello world!
+        </Center>
+      </NativeBaseProvider>
+    )
+  }
 }
-
-export default Index;

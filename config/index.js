@@ -1,9 +1,6 @@
-// 你自己的请求域名
-const HOST = process.env.TARO_ENV === 'rn' ? '"http://10.0.2.2:9527"' : '"http://127.0.0.1:9527"';
-
 const config = {
-  projectName: 'quark-app',
-  date: '2021-9-11',
+  projectName: 'quark-app-next',
+  date: '2022-7-28',
   designWidth: 750,
   deviceRatio: {
     640: 2.34 / 2,
@@ -12,18 +9,8 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
-  plugins: [
-    // 引入 npm 安装的插件，并传入插件参数
-    ['@tarojs/plugin-html', {
-      // 过滤 antd 组件库的前缀：am-
-      pxtransformBlackList: [/adm-/, /^body/]
-    }],
-    ['@quarkcms/plugin-mock', {
-      host: '127.0.0.1'
-    }]
-  ],
+  plugins: [],
   defineConstants: {
-    HOST: HOST
   },
   copy: {
     patterns: [
