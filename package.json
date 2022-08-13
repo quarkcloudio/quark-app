@@ -2,7 +2,7 @@
   "name": "quark-app",
   "version": "1.0.0",
   "private": true,
-  "description": "QaurkApp",
+  "description": "quark app",
   "templateInfo": {
     "name": "react-native",
     "typescript": true,
