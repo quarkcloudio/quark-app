@@ -1,11 +1,13 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "quark-app-next",
-  "description": "",
+  "projectname": "quark-app",
+  "description": "QaurkApp",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
     "postcss": false,
     "minified": false
   },
