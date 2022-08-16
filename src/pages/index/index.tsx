@@ -1,6 +1,7 @@
 import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import './index.scss'
+import { NativeBaseProvider, Text, Box } from 'native-base';
 
 export default class Index extends Component {
 
@@ -14,9 +15,12 @@ export default class Index extends Component {
 
   render () {
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-      </View>
+      <NativeBaseProvider>
+        <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
+          <View>Hello World!</View>
+          <Text>Open up App.js to start working on your app!</Text>
+        </Box>
+      </NativeBaseProvider>
     )
   }
 }
