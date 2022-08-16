@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { View } from '@tarojs/components'
 import './index.scss'
-import { NativeBaseProvider, Text, Box } from 'native-base';
+import { NativeBaseProvider, Text, Center, Container, Heading } from 'native-base';
 
 export default class Index extends Component {
 
@@ -16,10 +16,18 @@ export default class Index extends Component {
   render () {
     return (
       <NativeBaseProvider>
-        <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
-          <View>Hello World!</View>
-          <Text>Open up App.js to start working on your app!</Text>
-        </Box>
+        <Center>
+          <Container>
+            <Heading>
+              A component library for the
+              <Text color="emerald.500"> React Ecosystem</Text>
+            </Heading>
+            <Text mt="3" fontWeight="medium">
+              NativeBase is a simple, modular and accessible component library that
+              gives you building blocks to build you React applications.
+            </Text>
+          </Container>
+        </Center>
       </NativeBaseProvider>
     )
   }
