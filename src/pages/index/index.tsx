@@ -1,7 +1,8 @@
 import { Component } from 'react'
 import { View } from '@tarojs/components'
+import { NativeBaseProvider, Text, Center, Container, Heading, Button } from 'native-base';
+import { NativeModules } from 'react-native';
 import './index.scss'
-import { NativeBaseProvider, Text, Center, Container, Heading } from 'native-base';
 
 export default class Index extends Component {
 
@@ -12,6 +13,15 @@ export default class Index extends Component {
   componentDidShow () { }
 
   componentDidHide () { }
+
+  deviceProduct = async () => {
+    try {
+      const { product } = await NativeModules.DeviceProduct.getDeviceProduct();
+      NativeModules.Toast.show(product, NativeModules.Toast.SHORT);
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
   render () {
     return (
@@ -26,6 +36,7 @@ export default class Index extends Component {
               NativeBase is a simple, modular and accessible component library that
               gives you building blocks to build you React applications.
             </Text>
+            <Button onPress={() => {this.deviceProduct()}}>Test</Button>
           </Container>
         </Center>
       </NativeBaseProvider>
