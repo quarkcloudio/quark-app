@@ -1,5 +1,5 @@
 import React from 'react';
-import { NativeBaseProvider, Button, Center, Input, VStack, Box,Image,extendTheme } from "native-base";
+import { NativeBaseProvider, Button, Input, VStack, Box, Image, extendTheme } from "native-base";
 
 const Login: React.FC<any> = (props:any) => {
 
