@@ -8,7 +8,7 @@ const Login: React.FC<any> = (props:any) => {
       <div className='container' style={{padding:"0px 20px"}}>
         <Row type="flex" wrap="nowrap" justify="space-around">
           <Col span="24">
-            <div style={{textAlign:"center",marginTop:40,marginBottom:10}}>
+            <div style={{textAlign:"center",marginTop:80,marginBottom:10}}>
               <Avatar size="large" icon="my"/>
             </div>
           </Col>

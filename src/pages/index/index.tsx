@@ -15,7 +15,7 @@ export default class Index extends Component {
 
   render () {
     return (
-      <View>
+      <View className='index'>
         <Login />
       </View>
     )
