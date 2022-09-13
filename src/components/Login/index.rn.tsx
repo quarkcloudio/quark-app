@@ -1,19 +1,21 @@
 import React from 'react';
-import { NativeBaseProvider, Button, Center, Input, VStack, Box,Image } from "native-base";
+import { NativeBaseProvider, Button, Center, Input, VStack, Box,Image,extendTheme } from "native-base";
 
 const Login: React.FC<any> = (props:any) => {
 
+  const theme = extendTheme({});
+
   return (
-    <NativeBaseProvider>
-      <Box safeArea paddingLeft={5} paddingRight={5}>
-        <VStack space={4} alignItems="center">
-          <Box paddingTop={10}>
+    <NativeBaseProvider theme={theme}>
+      <Box safeArea paddingLeft={8} paddingRight={8}>
+        <VStack space={6} alignItems="center">
+          <Box paddingTop={20} paddingBottom={10}>
             <Image
               size={100}
               alt="fallback text"
               borderRadius={100}
               source={{
-                uri: "https://-page-icon.png"
+                uri: "https://gw.alicdn.com/tfs/TB1puqzr6MZ7e4jSZFOXXX7epXa-160-160.png"
               }}
               fallbackSource={{
                 uri: "https://www.w3schools.com/css/img_lights.jpg"
@@ -28,7 +30,7 @@ const Login: React.FC<any> = (props:any) => {
               _focus={{
                 borderColor: "gray.300",
               }}
-              style={{ fontSize: 14 }}
+              style={{ fontSize: 18 }}
             />
           </Box>
           <Box>
@@ -39,7 +41,8 @@ const Login: React.FC<any> = (props:any) => {
               _focus={{
                 borderColor: "gray.300",
               }}
-              style={{ fontSize: 14 }}
+              style={{ fontSize: 18 }}
+              InputRightElement={<Button variant={"link"} size="lg" _text={{color:"gray.400"}} w="1/3" h="full">发送验证码</Button>}
             />
           </Box>
           <Box width="100%" paddingTop={10}>
