@@ -7,20 +7,42 @@ const Login: React.FC<any> = (props:any) => {
     <NativeBaseProvider>
       <Box safeArea paddingLeft={5} paddingRight={5}>
         <VStack space={4} alignItems="center">
-          <Box>
-            <Image size={100} alt="fallback text" borderRadius={100} source={{
-              uri: "https://-page-icon.png"
-            }} fallbackSource={{
-              uri: "https://www.w3schools.com/css/img_lights.jpg"
-            }} />
+          <Box paddingTop={10}>
+            <Image
+              size={100}
+              alt="fallback text"
+              borderRadius={100}
+              source={{
+                uri: "https://-page-icon.png"
+              }}
+              fallbackSource={{
+                uri: "https://www.w3schools.com/css/img_lights.jpg"
+              }}
+            />
           </Box>
           <Box>
-            <Input variant="underlined" placeholder="请输入手机号" w="100%" />
+            <Input
+              variant="underlined"
+              placeholder="请输入手机号"
+              w="100%"
+              _focus={{
+                borderColor: "gray.300",
+              }}
+              style={{ fontSize: 14 }}
+            />
           </Box>
           <Box>
-            <Input variant="underlined" placeholder="请输入验证码" w="100%" />
+            <Input
+              variant="underlined"
+              placeholder="请输入验证码"
+              w="100%"
+              _focus={{
+                borderColor: "gray.300",
+              }}
+              style={{ fontSize: 14 }}
+            />
           </Box>
-          <Box width="100%">
+          <Box width="100%" paddingTop={10}>
             <Button size={"lg"} borderRadius="full" backgroundColor="#056de8">登录</Button>
           </Box>
         </VStack>

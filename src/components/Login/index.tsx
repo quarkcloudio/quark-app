@@ -9,7 +9,7 @@ const Login: React.FC<any> = (props:any) => {
         <Row type="flex" wrap="nowrap" justify="space-around">
           <Col span="24">
             <div style={{textAlign:"center",marginTop:80,marginBottom:10}}>
-              <Avatar size="large" icon="my"/>
+              <Avatar size="100" icon="my"/>
             </div>
           </Col>
         </Row>
