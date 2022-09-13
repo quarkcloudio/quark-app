@@ -26,7 +26,7 @@ const Login: React.FC<any> = (props:any) => {
                 clearable
                 center
                 placeholder='请输入验证码'
-                slotButton={<Button plain shape="square" size="small" type="default">发送验证码</Button>}
+                slotButton={<div style={{color:"#666666"}}>发送验证码</div>}
               />
           </Col>
         </Row>
