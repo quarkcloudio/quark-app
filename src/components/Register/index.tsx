@@ -5,11 +5,14 @@ const Login: React.FC<any> = (props:any) => {
 
   return (
     <ConfigProvider>
-      <div className='container' style={{padding:"0px 20px"}}>
+      <div className='container' style={{padding:"0px 30px"}}>
         <Row type="flex" wrap="nowrap" justify="space-around">
           <Col span="24">
-            <div style={{textAlign:"center",marginTop:80,marginBottom:10}}>
-              <Avatar size="100" icon="https://gw.alicdn.com/tfs/TB1puqzr6MZ7e4jSZFOXXX7epXa-160-160.png"/>
+            <div style={{marginTop:60,marginBottom:10,fontSize:33}}>
+              手机号注册
+            </div>
+            <div style={{marginTop:10,marginBottom:30,fontSize:16,color:'#999'}}>
+              欢迎您注册账号
             </div>
           </Col>
         </Row>
@@ -32,8 +35,8 @@ const Login: React.FC<any> = (props:any) => {
         </Row>
         <Row type="flex" wrap="nowrap">
           <Col span="24">
-            <div style={{textAlign:'center',marginTop:20}}>
-              <Button block type="info" size='large'>登录</Button>
+            <div style={{textAlign:'center',marginTop:50}}>
+              <Button block type="info" size='large'>注册</Button>
             </div>
           </Col>
         </Row>
