@@ -1,5 +1,5 @@
 import React from 'react';
-import { NativeBaseProvider, Button, Input, VStack, Box, Image, extendTheme } from "native-base";
+import { NativeBaseProvider, Button, Input, VStack, Box, Text, extendTheme } from "native-base";
 
 const Register: React.FC<any> = (props:any) => {
 
@@ -9,18 +9,13 @@ const Register: React.FC<any> = (props:any) => {
     <NativeBaseProvider theme={theme}>
       <Box safeArea paddingLeft={8} paddingRight={8}>
         <VStack space={6} alignItems="center">
-          <Box paddingTop={20} paddingBottom={10}>
-            <Image
-              size={100}
-              alt="fallback text"
-              borderRadius={100}
-              source={{
-                uri: "https://gw.alicdn.com/tfs/TB1puqzr6MZ7e4jSZFOXXX7epXa-160-160.png"
-              }}
-              fallbackSource={{
-                uri: "https://www.w3schools.com/css/img_lights.jpg"
-              }}
-            />
+          <Box paddingTop={20} paddingBottom={10} w="100%">
+            <Text paddingBottom={1} color="coolGray.600" fontSize={"4xl"}>
+              手机号注册
+            </Text>
+            <Text color="coolGray.400" fontSize={"lg"} fontWeight="400">
+              亲，欢迎注册本站账号
+            </Text>
           </Box>
           <Box>
             <Input
@@ -46,7 +41,7 @@ const Register: React.FC<any> = (props:any) => {
             />
           </Box>
           <Box width="100%" paddingTop={10}>
-            <Button size={"lg"} borderRadius="full" backgroundColor="#056de8">登录</Button>
+            <Button size={"lg"} borderRadius="full" backgroundColor="#056de8">注册</Button>
           </Box>
         </VStack>
       </Box>
