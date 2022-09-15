@@ -8,29 +8,30 @@ const Login: React.FC<any> = (props:any) => {
       <div className='container' style={{padding:"0px 30px"}}>
         <Row type="flex" wrap="nowrap" justify="space-around">
           <Col span="24">
-            <div style={{marginTop:60,marginBottom:10,fontSize:33}}>
+            <div style={{marginTop:60,fontSize:33}}>
               手机号注册
             </div>
-            <div style={{marginTop:10,marginBottom:30,fontSize:16,color:'#999'}}>
-              欢迎您注册账号
+            <div style={{marginBottom:30,fontSize:16,color:'#999'}}>
+              亲，欢迎注册本站账号
             </div>
           </Col>
         </Row>
         <Row type="flex" wrap="nowrap" justify="space-around">
           <Col span="24">
-            <Input labelWidth={0} label={undefined}  placeholder="请输入手机号" />
+            <Input style={{padding:"10px 0px"}} labelWidth={0} label={undefined}  placeholder="请输入手机号" />
           </Col>
         </Row>
         <Row type="flex" wrap="nowrap" justify="space-around">
           <Col span="24">
             <Input
-                labelWidth={0}
-                label={undefined}
-                clearable
-                center
-                placeholder='请输入验证码'
-                slotButton={<div style={{color:"#666666"}}>发送验证码</div>}
-              />
+              style={{padding:"10px 0px"}}
+              labelWidth={0}
+              label={undefined}
+              clearable
+              center
+              placeholder='请输入验证码'
+              slotButton={<div style={{color:"#666666"}}>发送验证码</div>}
+            />
           </Col>
         </Row>
         <Row type="flex" wrap="nowrap">
