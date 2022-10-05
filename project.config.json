@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
   "projectname": "quark-app",
-  "description": "quark app",
+  "description": "QuarkAPP",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
