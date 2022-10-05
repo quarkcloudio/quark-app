@@ -3,11 +3,16 @@ import React, {
   useEffect,
 } from 'react'
 
+import {
+  TouchableOpacity
+} from 'react-native';
+
 import { View } from '@tarojs/components'
 import './button.scss'
 
 export interface ButtonProps {
   className: string
+  type: string
   color: string
   plain: boolean
   loading: boolean
@@ -20,6 +25,7 @@ export interface ButtonProps {
 
 const defaultProps = {
   className: '',
+  type: 'default',
   color: '',
   plain: false,
   loading: false,
@@ -37,9 +43,11 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = (props) => {
   }, [])
 
   return (
-    <View className="qua-button qua-button--primary">
-      {props.children}
-    </View>
+    <TouchableOpacity activeOpacity={0.7}>
+      <View className={`qua-button qua-button--${props.type}`}>
+        {props.children}
+      </View>
+    </TouchableOpacity>
   )
 }
 

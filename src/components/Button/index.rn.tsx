@@ -12,6 +12,7 @@ import './button.scss'
 
 export interface ButtonProps {
   className: string
+  type: string
   color: string
   plain: boolean
   loading: boolean
@@ -24,6 +25,7 @@ export interface ButtonProps {
 
 const defaultProps = {
   className: '',
+  type: 'default',
   color: '',
   plain: false,
   loading: false,
@@ -42,7 +44,7 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = (props) => {
 
   return (
     <TouchableOpacity activeOpacity={0.7}>
-      <View className="qua-button qua-button--primary">
+      <View className={`qua-button qua-button--${props.type}`}>
         {props.children}
       </View>
     </TouchableOpacity>

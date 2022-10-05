@@ -16,7 +16,7 @@ export default class Index extends Component<PropsWithChildren> {
   render () {
     return (
       <View className='index'>
-        <Button type="primary">主要按钮</Button>
+        <Button type="default">主要按钮</Button>
       </View>
     )
   }
