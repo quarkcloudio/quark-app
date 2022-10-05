@@ -1,9 +1,8 @@
 import { Component, PropsWithChildren } from 'react'
 import { View } from '@tarojs/components'
-import Page from '../../components/engine/page'
-import './index.scss'
+import { Button } from '.'
 
-export default class Index extends Component<PropsWithChildren> {
+export default class Demo extends Component<PropsWithChildren> {
 
   componentDidMount () { }
 
@@ -15,8 +14,9 @@ export default class Index extends Component<PropsWithChildren> {
 
   render () {
     return (
-      <View className='index'>
-        <Page api="/api/mix/page/index" />
+      <View>
+        <Button type="default">默认按钮</Button>
+        <Button type="primary">主要按钮</Button>
       </View>
     )
   }
