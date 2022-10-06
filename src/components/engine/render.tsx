@@ -35,24 +35,16 @@ const Render: React.FC<Partial<RenderProps>> = (props) => {
 
     if (body.hasOwnProperty('component')) {
       parseComponents.map((item: any) => {
-        if (item.key.indexOf(body.component + '|') != -1) {
+        if (item.key === body.component) {
           component = item.component;
-        } else {
-          if (item.key === body.component) {
-            component = item.component;
-          }
         }
       });
     } else {
       component = body.map((item: any) => {
         return parseComponents.map(
           (componentItem: any) => {
-            if (componentItem.key.indexOf(item.component + '|') != -1) {
+            if (componentItem.key === item.component) {
               return componentItem.component;
-            } else {
-              if (componentItem.key === item.component) {
-                return componentItem.component;
-              }
             }
           },
         );
