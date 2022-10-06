@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Taro from '@tarojs/taro'
-import Render from '../engine/render'
+import Render from './render'
 import { get } from "../../services/action"
 
 export interface EngineProps {
   api: string
 }
 
-const Engine: React.FC<Partial<EngineProps>> = (props) => {
-  const [body, setBody] = useState(null);
+export const Engine: React.FC<Partial<EngineProps>> = (props) => {
+
+  const [body, setBody] = useState<any>(null);
   const instance = Taro.getCurrentInstance()
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Engine: React.FC<Partial<EngineProps>> = (props) => {
     }
 
     getComponents(getApi)
-  }, [props.api]);
+  }, [props]);
 
   // 获取组件
   const getComponents = async (api: any) => {
@@ -41,5 +42,3 @@ const Engine: React.FC<Partial<EngineProps>> = (props) => {
     <Render body={body} />
   );
 }
-
-export default Engine;

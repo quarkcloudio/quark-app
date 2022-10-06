@@ -1,5 +1,6 @@
 import React from 'react';
-import { View } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
+import Page from '../page'
 
 export interface RenderProps {
   body: any,
@@ -8,14 +9,22 @@ export interface RenderProps {
 }
 
 const Render: React.FC<Partial<RenderProps>> = (props) => {
-  console.log(props.body)
-
-    // 注册组件
+  
+  // 注册组件
   const parseComponent = (body: any, data: any, callback: any) => {
+    
     return [
       {
         key: 'page',
-        component: <View>Test</View>,
+        component: <Page {...body} />,
+      },
+      {
+        key: 'view',
+        component: <View style={{ ...body.style }}>{body.body}</View>,
+      },
+      {
+        key: 'text',
+        component: <Text {...body}>{body.body}</Text>,
       },
     ];
   };
@@ -27,7 +36,7 @@ const Render: React.FC<Partial<RenderProps>> = (props) => {
     }
 
     if (typeof body === 'string' || typeof body === 'number') {
-      return body;
+      return <Text>{body}</Text>;
     }
 
     let component: any = null;
@@ -55,6 +64,6 @@ const Render: React.FC<Partial<RenderProps>> = (props) => {
   };
 
   return componentRender(props.body, props.data, props.callback);
-};
+}
 
 export default Render;

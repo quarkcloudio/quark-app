@@ -1,0 +1,25 @@
+.qua-button {
+  align-self: flex-start;
+  height: 88px;
+  line-height: 88px;
+  padding:0px 50px;
+  font-size: 28px;
+  border-radius: 50px;
+  text-align: center;
+  /*  #ifndef  rn  */
+  cursor: pointer;
+  /*  #endif  */
+
+  &--primary {
+    background: #fa2c19;
+    border: 1px solid transparent;
+    color:#fff;
+  }
+
+  &--default {
+    background: #ffffff;
+    border: 1px solid transparent;
+    border-color: rgba(204, 204, 204, 1);
+    color:rgba(102, 102, 102, 1);
+  }
+}

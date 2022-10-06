@@ -1,6 +1,6 @@
 import { Component, PropsWithChildren } from 'react'
 import { View } from '@tarojs/components'
-import { Button } from './button'
+import { Page } from './page'
 
 export default class Demo extends Component<PropsWithChildren> {
 
@@ -15,8 +15,7 @@ export default class Demo extends Component<PropsWithChildren> {
   render () {
     return (
       <View>
-        <Button type="default">默认按钮</Button>
-        <Button type="primary">主要按钮</Button>
+        <Page></Page>
       </View>
     )
   }

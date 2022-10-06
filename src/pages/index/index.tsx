@@ -1,6 +1,6 @@
 import { Component, PropsWithChildren } from 'react'
 import { View } from '@tarojs/components'
-import Page from '../../components/engine/page'
+import Engine from '../../components/engine'
 import './index.scss'
 
 export default class Index extends Component<PropsWithChildren> {
@@ -16,7 +16,7 @@ export default class Index extends Component<PropsWithChildren> {
   render () {
     return (
       <View className='index'>
-        <Page api="/api/mix/page/index" />
+        <Engine api="/api/native/page/index" />
       </View>
     )
   }
