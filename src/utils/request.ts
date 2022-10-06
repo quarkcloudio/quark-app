@@ -27,7 +27,7 @@ export const request = async (url, options) => {
 		})
 		token = getToken.data
 	} catch (e) {
-		console.log(e)
+		// console.log(e)
 	}
 
 	var res = await Taro.request({
