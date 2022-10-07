@@ -8,8 +8,8 @@ import './app.scss'
 class App extends Component<PropsWithChildren> {
 
   componentDidMount () {
-    
-    // 去除循环引入警告
+
+    // 忽略循环引入警告
     LogBox.ignoreLogs(['Require cycle:']);
 
     // 隐藏进入动画
