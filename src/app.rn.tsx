@@ -1,13 +1,18 @@
 import { Component, PropsWithChildren } from 'react'
 import SplashScreen from 'react-native-splash-screen'
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { StatusBar } from 'react-native'
+import { StatusBar, LogBox } from 'react-native'
 
 import './app.scss'
 
 class App extends Component<PropsWithChildren> {
 
   componentDidMount () {
+    
+    // 去除循环引入警告
+    LogBox.ignoreLogs(['Require cycle:']);
+
+    // 隐藏进入动画
     SplashScreen && SplashScreen.hide();
   }
 
