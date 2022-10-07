@@ -1,5 +1,6 @@
 import { FunctionComponent, useEffect } from 'react'
 import { View } from '@tarojs/components'
+import Taro from '@tarojs/taro'
 import Render from '../engine/render'
 import './page.scss'
 
@@ -7,25 +8,41 @@ export interface PageProps {
   className: string
   loading: boolean
   style: any
-  content:any
+  title: string
+  content: any
 }
 
 const defaultProps = {
   className: '',
   loading: false,
   style: null,
-  content: null,
+  title: '',
+  content: null
 } as PageProps
 
 export const Page: FunctionComponent<Partial<PageProps>> = (props) => {
 
+  const {
+    className,
+    loading,
+    style,
+    title,
+    content,
+    ...rest
+  } = {
+    ...defaultProps,
+    ...props,
+  }
+
   useEffect(() => {
-    // console.log(props.style)
+    Taro.setNavigationBarTitle({
+      title: title
+    })
   }, [])
 
   return (
-    <View style={{...props.style}}>
-      <Render body={props.content} />
+    <View style={{...style}} {...rest}>
+      <Render body={content} />
     </View>
   )
 }
