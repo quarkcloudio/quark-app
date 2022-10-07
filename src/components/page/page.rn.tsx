@@ -20,7 +20,7 @@ const defaultProps = {
 export const Page: FunctionComponent<Partial<PageProps>> = (props) => {
 
   useEffect(() => {
-    console.log(props.style)
+    // console.log(props.style)
   }, [])
 
   return (
