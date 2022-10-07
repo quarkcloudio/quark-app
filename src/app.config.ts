@@ -13,16 +13,18 @@ export default defineAppConfig({
     navigationBarTextStyle: 'black'
   },
 	tabBar: {
-		color: "rgb(145,145,145)",
-		selectedColor: "rgb(46,143,254)",
-		borderStyle: "black",
-		backgroundColor: "#ffffff",
+    color: '#333333',
+    selectedColor: '#6190E8', // 主题色
 		list: [{
 			"pagePath": "pages/index/index",
-			"text": "首页"
+			"text": "首页",
+      "iconPath":"assets/icons/system.png",
+      "selectedIconPath":"assets/icons/system_selected.png"
 		}, {
 			"pagePath": "pages/my/index",
-			"text": "我的"
+			"text": "我的",
+      "iconPath":"assets/icons/user.png",
+      "selectedIconPath":"assets/icons/user_selected.png"
 		}]
 	}
 })
