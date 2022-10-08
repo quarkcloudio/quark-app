@@ -5,7 +5,6 @@ import Render from '../engine/render'
 import './page.scss'
 
 export interface PageProps {
-  className: string
   loading: boolean
   style: any
   title: string
@@ -13,7 +12,6 @@ export interface PageProps {
 }
 
 const defaultProps = {
-  className: '',
   loading: false,
   style: null,
   title: '',
@@ -23,7 +21,6 @@ const defaultProps = {
 export const Page: FunctionComponent<Partial<PageProps>> = (props) => {
 
   const {
-    className,
     loading,
     style,
     title,

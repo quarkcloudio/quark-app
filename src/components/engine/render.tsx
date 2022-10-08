@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text } from '@tarojs/components'
 import Page from '../page'
+import Navigator from '../navigator'
 
 export interface RenderProps {
   body: any,
@@ -15,16 +16,20 @@ const Render: React.FC<Partial<RenderProps>> = (props) => {
     
     return [
       {
-        key: 'page',
-        component: <Page {...body} />,
-      },
-      {
         key: 'view',
-        component: <View style={{ ...body.style }}>{body.body}</View>,
+        component: <View style={{ ...body.style }}>{componentRender(body.body, body.data, body.callback)}</View>,
       },
       {
         key: 'text',
         component: <Text {...body}>{body.body}</Text>,
+      },
+      {
+        key: 'page',
+        component: <Page {...body} />,
+      },
+      {
+        key: 'navigator',
+        component: <Navigator {...body}>{componentRender(body.body, body.data, body.callback)}</Navigator>,
       },
     ];
   };
