@@ -17,11 +17,14 @@ const Render: React.FC<Partial<RenderProps>> = (props) => {
     return [
       {
         key: 'view',
-        component: <View style={{ ...body.style }}>{componentRender(body.body, body.data, body.callback)}</View>,
+        component: 
+          <View style={{ ...body.style }}>
+            { body?.body?.hasOwnProperty('component') ? componentRender(body.body, body.data, body.callback) : body.body }
+          </View>,
       },
       {
         key: 'text',
-        component: <Text {...body}>{body.body}</Text>,
+        component: <Text {...body}>{ body?.body?.hasOwnProperty('component') ? componentRender(body.body, body.data, body.callback) : body.body }</Text>,
       },
       {
         key: 'page',
