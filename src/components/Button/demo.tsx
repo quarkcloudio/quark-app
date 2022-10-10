@@ -14,9 +14,9 @@ export default class Demo extends Component<PropsWithChildren> {
 
   render () {
     return (
-      <View>
+      <View className='index' style={{flexDirection: 'row'}}>
         <Button type="default">默认按钮</Button>
-        <Button type="primary">主要按钮</Button>
+        <Button size="large" type="primary" shape='square'>主要按钮</Button>
       </View>
     )
   }
