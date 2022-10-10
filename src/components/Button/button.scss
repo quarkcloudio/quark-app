@@ -1,25 +1,139 @@
+@import '../../styles/variables.scss';
+
 .qua-button {
   align-self: flex-start;
-  height: 88px;
-  line-height: 88px;
-  padding:0px 50px;
-  font-size: 28px;
-  border-radius: 50px;
+  font-size: $button-default-font-size;
   text-align: center;
   /*  #ifndef  rn  */
   cursor: pointer;
   /*  #endif  */
 
-  &--primary {
-    background: #fa2c19;
-    border: 1px solid transparent;
-    color:#fff;
+  &--default {
+    color: $button-default-color;
+    background: $button-default-bg-color;
+    border: $button-border-width solid $button-default-border-color;
   }
 
-  &--default {
-    background: #ffffff;
-    border: 1px solid transparent;
-    border-color: rgba(204, 204, 204, 1);
-    color:rgba(102, 102, 102, 1);
+  &--primary {
+    color: $button-primary-color;
+    background: $button-primary-background-color;
+    border: $button-border-width solid transparent;
+  }
+
+  &--info {
+    color: $button-info-color;
+    background: $button-info-background-color;
+    border: $button-border-width solid transparent;
+  }
+
+  &--success {
+    color: $button-success-color;
+    background: $button-success-background-color;
+    border: $button-border-width solid transparent;
+  }
+
+  &--danger {
+    color: $button-danger-color;
+    background: $button-danger-background-color;
+    border: $button-border-width solid transparent;
+  }
+
+  &--warning {
+    color: $button-warning-color;
+    background: $button-warning-background-color;
+    border: $button-border-width solid transparent;
+  }
+
+  &--plain {
+    background: $button-plain-background-color;
+
+    &.nut-button--primary {
+      color: $button-primary-border-color;
+      border-color: $button-primary-border-color;
+    }
+
+    &.nut-button--info {
+      color: $button-info-border-color;
+      border-color: $button-info-border-color;
+    }
+
+    &.nut-button--success {
+      color: $button-success-border-color;
+      border-color: $button-success-border-color;
+    }
+
+    &.nut-button--danger {
+      color: $button-danger-border-color;
+      border-color: $button-danger-border-color;
+    }
+
+    &.nut-button--warning {
+      color: $button-warning-border-color;
+      border-color: $button-warning-border-color;
+    }
+  }
+
+  &--large {
+    width: 100%;
+    height: $button-large-height;
+    line-height: $button-large-line-height;
+    /*  #ifdef  rn  */
+    height: $button-large-height * $hd;
+    line-height: $button-large-line-height * $hd;
+    /*  #endif  */
+  }
+
+  &--normal {
+    padding: 0 18px;
+    height: $button-default-height;
+    line-height: $button-default-line-height;
+    /*  #ifdef  rn  */
+    padding: 0 18px * $hd;
+    height: $button-default-height * $hd;
+    line-height: $button-default-line-height * $hd;
+    /*  #endif  */
+  }
+
+  &--small {
+    height: $button-small-height;
+    line-height: $button-small-line-height;
+    padding: 0 $padding-xs;
+    font-size: $font-size-1;
+
+    /*  #ifdef  rn  */
+    height: $button-small-height * $hd;
+    line-height: $button-small-line-height * $hd;
+    padding: 0 $padding-xs;
+    /*  #endif  */
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--disabled {
+    /*  #ifndef  rn  */
+    cursor: not-allowed;
+    /*  #endif  */
+    opacity: $button-disabled-opacity;
+  }
+
+  &--loading {
+    /*  #ifndef  rn  */
+    cursor: default;
+    /*  #endif  */
+    opacity: 0.9;
+  }
+
+  &--round {
+    border-radius: $button-border-radius;
+    /*  #ifdef  rn  */
+    border-radius: $button-border-radius*$hd;
+    /*  #endif  */
+  }
+
+  &--square {
+    border-radius: 0;
   }
 }

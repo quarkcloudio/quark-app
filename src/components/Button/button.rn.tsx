@@ -1,5 +1,4 @@
 import React, {
-  FunctionComponent,
   useEffect,
 } from 'react'
 
@@ -13,11 +12,13 @@ import './button.scss'
 export interface ButtonProps {
   className: string
   type: string
+  size: string
+  shape: string
   color: string
   plain: boolean
   loading: boolean
   disabled: boolean
-  style: React.CSSProperties
+  style: any
   block: boolean
   icon: string
   children: any
@@ -26,6 +27,8 @@ export interface ButtonProps {
 const defaultProps = {
   className: '',
   type: 'default',
+  size: 'normal',
+  shape: 'round',
   color: '',
   plain: false,
   loading: false,
@@ -36,7 +39,7 @@ const defaultProps = {
   children: undefined,
 } as ButtonProps
 
-export const Button: FunctionComponent<Partial<ButtonProps>> = (props) => {
+export const Button: React.FC<Partial<ButtonProps>> = (props) => {
 
   useEffect(() => {
 
@@ -44,7 +47,14 @@ export const Button: FunctionComponent<Partial<ButtonProps>> = (props) => {
 
   return (
     <TouchableOpacity activeOpacity={0.7}>
-      <View className={`qua-button qua-button--${props.type}`}>
+      <View
+        className={`
+          qua-button qua-button--${props.type}
+          qua-button--${props.size}
+          qua-button--${props.shape}
+        `}
+        style={props.style}
+      >
         {props.children}
       </View>
     </TouchableOpacity>

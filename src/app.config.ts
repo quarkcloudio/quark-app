@@ -4,7 +4,8 @@ export default defineAppConfig({
     'pages/my/index',
     'pages/engine/index',
     'pages/engine/withNavBar',
-    'pages/engine/withoutNavBar'
+    'pages/engine/withoutNavBar',
+    'pages/test/index'
   ],
   window: {
     backgroundTextStyle: 'light',
