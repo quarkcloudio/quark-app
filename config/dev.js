@@ -4,7 +4,20 @@ module.exports = {
   },
   defineConstants: {
   },
-  apiHost:"http://10.10.90.16:3000",
+  // apiHost:"http://127.0.0.1:3000",
+  apiHost:"",
   mini: {},
-  h5: {}
+  h5: {
+    devServer: {
+      proxy: {
+        '/api': {
+          target: 'http://127.0.0.1:3000',
+          changeOrigin: true,
+          pathRewrite: {
+            '^/api': 'api'
+          }
+        },
+      },
+    }
+  },
 }
