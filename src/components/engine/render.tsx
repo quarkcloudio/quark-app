@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from '@tarojs/components'
 import Page from '../page'
 import Navigator from '../navigator'
+import Button from '../button'
 
 export interface RenderProps {
   body: any,
@@ -33,6 +34,13 @@ const Render: React.FC<Partial<RenderProps>> = (props) => {
       {
         key: 'navigator',
         component: <Navigator {...body}>{componentRender(body.body, body.data, body.callback)}</Navigator>,
+      },
+      {
+        key: 'button',
+        component: 
+          <Button {...body}>
+            { body?.body?.hasOwnProperty('component') ? componentRender(body.body, body.data, body.callback) : body.body }
+          </Button>,
       },
     ];
   };
