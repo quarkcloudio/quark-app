@@ -2,10 +2,6 @@ import React, {
   useEffect,
 } from 'react'
 
-import {
-  TouchableOpacity
-} from 'react-native';
-
 import { View } from '@tarojs/components'
 import './button.scss'
 
@@ -46,18 +42,16 @@ export const Button: React.FC<Partial<ButtonProps>> = (props) => {
   }, [])
 
   return (
-    <TouchableOpacity activeOpacity={0.7}>
-      <View
-        className={`
-          qua-button qua-button--${props.type}
-          qua-button--${props.size}
-          qua-button--${props.shape}
-        `}
-        style={props.style}
-      >
-        {props.children}
-      </View>
-    </TouchableOpacity>
+    <View
+      className={`
+        qua-button qua-button--${props.type}
+        qua-button--${props.size}
+        qua-button--${props.shape}
+      `}
+      style={props.style}
+    >
+      {props.children}
+    </View>
   )
 }
 
